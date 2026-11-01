@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LabCare — Sistem Informasi Laboratorium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">✚</div><div><b>LabCare</b><small>Sistem Informasi Lab</small></div></div>
+      <div class="role-switch">
+        <label for="roleSelect">Masuk sebagai</label>
+        <select id="roleSelect"><option value="admin">Admin Laboratorium</option><option value="doctor">Dokter</option><option value="patient">Pasien</option></select>
+      </div>
+      <nav id="navigation">
+        <button class="nav-link active" data-page="dashboard">▦ <span>Beranda</span></button>
+        <button class="nav-link" data-page="orders">▤ <span>Notifikasi & Order</span><i id="orderBadge">3</i></button>
+        <button class="nav-link" data-page="patients">♙ <span>Data Pasien</span></button>
+        <button class="nav-link" data-page="examinations">⚕ <span>Pemeriksaan</span></button>
+        <button class="nav-link" data-page="inventory">▣ <span>Stok Reagen & Alat</span></button>
+        <button class="nav-link" data-page="quality">✓ <span>Quality Control</span></button>
+        <button class="nav-link" data-page="integration">⌘ <span>Integrasi Alat</span></button>
+        <button class="nav-link" data-page="patient-portal">♡ <span>Portal Pasien</span></button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> Sistem demo aktif <small>Versi prototipe 1.0</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div><div class="eyebrow">SISTEM INFORMASI LABORATORIUM</div><h1 id="pageTitle">Beranda</h1></div>
+        <div class="top-actions">
+          <div class="view-switch" role="group" aria-label="Pilih tampilan">
+            <button type="button" class="view-btn active" id="webViewBtn" aria-pressed="true">▣ Web</button>
+            <button type="button" class="view-btn" id="mobileViewBtn" aria-pressed="false">▯ Mobile</button>
+          </div>
+          <span class="today" id="today"></span><button class="avatar" title="Profil">👤</button>
+        </div>
+      </header>
+      <section id="pageContent" class="content"></section>
+      <footer>LabCare Prototype · Gunakan data simulasi, bukan data pasien sebenarnya.</footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" id="mobileNavigation" aria-label="Navigasi mobile"></nav>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
